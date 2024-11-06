@@ -23,6 +23,19 @@ ul{
     
 }
 
+.header-logo{
+    max-height: inherit;
+    position: relative;
+    display: block;
+    text-decoration: none;
+}
+
+.header-left{
+    height: 50%;
+    align-content: center;
+    flex-grow: 0.5;
+}
+
 .mainlogo{
     width: 145px;
     height: 20px;
@@ -65,7 +78,7 @@ header{
     margin: 0 275px;
     display: flex;
     justify-content: space-between;
-    align-content: space-between;
+    align-content: center;
     align-items: center;
     flex-wrap: wrap;   
 }
@@ -98,8 +111,8 @@ ul{
 }
 
 li.app-header-item {
-    margin-left: 40px;
-    text-align: left;
+    display: flex;
+    margin-right: 40px;
     white-space: nowrap;
 }
 
