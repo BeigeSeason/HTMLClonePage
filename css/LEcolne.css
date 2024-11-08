@@ -18,6 +18,10 @@ a {
   text-decoration: none;
 }
 
+span > a {
+  color: #666;
+}
+
 ul {
   list-style-type: none;
   display: flex;
@@ -150,6 +154,7 @@ li.app-header-item {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  padding: 117px 0 112px;
 }
 
 .main-swipe {
@@ -173,57 +178,232 @@ li.app-header-item {
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-wrap: wrap;
   width: 100%;
   max-width: 1156px;
   min-width: 1000px;
 }
 
-.banner_top {
+.banner {
   width: 100%;
-  height: 13vw;
+  aspect-ratio: 100/13;
   border-radius: 20px;
   background-color: beige;
   margin-top: 60px;
 }
 
-#curated {
+.mline {
   display: flex;
   margin-top: 50px;
   width: 100%;
   height: 35px;
   justify-content: center;
+  letter-spacing: 2px;
 }
 
 #curated-content {
+  list-style-type: none;
+  /* width: 1156px; */
+  aspect-ratio: 6 / 2;
   width: 100%;
-
+  /* height: 350px; */
+  overflow: hidden;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   position: relative;
   margin: 0;
   padding: 0;
   font-size: 12px;
   line-height: 1.5;
+  /* padding: 0; */
 }
 
 #curated-content > li {
-  width: 50%;
-  height: 70%;
+  padding: 0px 4px 15px 4px;
+  max-width: 49%;
+  width: 49%;
+  aspect-ratio: 6 / 4;
+  /* height: 100%; */
   display: flex;
   flex-flow: column;
-  border-radius: 12px;
+  flex-wrap: nowrap;
+  overflow: hidden;
+
+  align-content: center;
+  justify-content: center;
+}
+
+li > a {
+  /* margin: 0 1px 0 1px; */
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  align-content: center;
+  justify-content: center;
 }
 
 li > a > img {
-  position: relative;
-  width: 100%;
+  width: 120%;
   height: auto;
-  overflow: hidden;
+  object-fit: cover;
+  display: block;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
 }
 
+li > .pickbox {
+  width: 100%-2px;
+  height: 18%;
+  background-color: beige;
+  border: 1px solid #ccc;
+  border-top: 0;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  padding: 21.6px 18px 18px;
+}
+
 span {
+  font-size: 16px;
   padding-bottom: 16px;
+}
+
+.pickbox .title {
+  color: #333;
+  font-size: 18px;
+  white-space: initial;
+  display: block;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.pickbox .title:hover {
+  text-decoration: underline;
+}
+
+.pickbox .title::before {
+  content: "주요 콘텐츠";
+  font-weight: 400;
+  letter-spacing: 0;
+  font-size: 0.6em;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.community {
+  /* border: 1px solid black; */
+  max-width: 1156px;
+  width: 100%;
+  /* max-width: 1156px; */
+  aspect-ratio: 100/42;
+  /* height: 500px; */
+  display: flex;
+  flex-wrap: wrap;
+  padding: 16px 2px 16px 2px;
+  align-content: center;
+  justify-content: space-evenly;
+}
+
+#desktop-board {
+  display: flex;
+  flex-flow: column;
+  width: 60%;
+  height: 90%;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  padding: 20px;
+}
+
+#desktop-daily {
+  display: flex;
+  flex-flow: column;
+  width: 30%;
+  height: 90%;
+  border-radius: 10px;
+  border: 1px solid #666;
+  padding: 20px;
+}
+
+.boards {
+  padding-top: 5px;
+  justify-content: flex-start;
+}
+
+.boards > li {
+  display: flex;
+}
+
+.boards > li > a {
+  text-align: start;
+  font-size: 18px;
+  margin: 0 0 0 3px;
+  padding: 5px 20px 5px 0;
+  color: #222;
+  font-weight: 500;
+}
+
+.board-view {
+  height: 90%;
+  padding-top: 15px;
+}
+
+.board-view-each {
+  height: 100%;
+}
+
+.board-view > .board-view-each > li {
+  width: 100%;
+  height: 100%;
+}
+
+.board-view > .board-view-each > li > ul {
+  display: flex;
+  flex-flow: column;
+}
+
+.board-view > .board-view-each > li > ul > li {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  height: 30.5px;
+  width: 100%;
+  padding: 5px 0px;
+  align-items: center;
+}
+
+.board-view > .board-view-each > li > ul > li:first-child {
+  border-top: 1px solid #aaa;
+}
+
+.board-view > .board-view-each > li > ul > li > span {
+  font-weight: normal;
+  font-size: 15px;
+  padding: 0;
+}
+
+.category {
+  margin-right: 20px;
+}
+
+.more_area {
+  font-size: 14px;
+  display: flex;
+  margin-top: 10px;
+  border: 1px solid #666;
+  height: 48px;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.more_area > p {
+  font-weight: 600;
+  color: red;
+  margin-left: 0.5em;
+}
+
+footer {
+  width: 100%;
+  aspect-ratio: 100/15;
+  background-color: black;
 }
