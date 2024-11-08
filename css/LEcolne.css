@@ -73,6 +73,10 @@ header {
   justify-content: center;
   align-items: center;
   position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: white;
+  border-bottom: 1px solid #999;
 }
 
 .header-container {
@@ -154,16 +158,46 @@ li.app-header-item {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 117px 0 112px;
+  padding: 0 0 112px;
 }
 
-.main-swipe {
+.sw-display {
   display: flex;
   width: 100%;
-  height: 40vw;
+  max-width: 1980px;
+  aspect-ratio: 10/4;
   background-color: #666;
   z-index: 1;
   padding-bottom: 24px;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.sw-display > img {
+  position: relative;
+  width: 27px;
+  height: 44px;
+  cursor: pointer;
+  background-size: 27px 44px;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.9;
+  z-index: 10;
+}
+
+.main-swipe {
+  z-index: 5;
+  flex-grow: 1;
+  background-color: transparent;
+}
+
+.main-swipe > img {
+  position: relative;
+  left: -30px;
+  width: 110%;
+  height: auto;
 }
 
 .swtitle {
@@ -190,6 +224,12 @@ li.app-header-item {
   border-radius: 20px;
   background-color: beige;
   margin-top: 60px;
+  overflow: hidden;
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
 }
 
 .mline {
@@ -256,7 +296,6 @@ li > a > img {
 li > .pickbox {
   width: 100%-2px;
   height: 18%;
-  background-color: beige;
   border: 1px solid #ccc;
   border-top: 0;
   border-bottom-left-radius: 12px;
@@ -315,19 +354,10 @@ span {
   padding: 20px;
 }
 
-#desktop-daily {
-  display: flex;
-  flex-flow: column;
-  width: 30%;
-  height: 90%;
-  border-radius: 10px;
-  border: 1px solid #666;
-  padding: 20px;
-}
-
 .boards {
   padding-top: 5px;
   justify-content: flex-start;
+  white-space: nowrap;
 }
 
 .boards > li {
@@ -402,8 +432,132 @@ span {
   margin-left: 0.5em;
 }
 
-footer {
+#desktop-daily {
+  display: flex;
+  flex-flow: column;
+  width: 30%;
+  height: 90%;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  padding: 20px;
+}
+
+#desktop-daily > p {
+  font-family: "noto sans kr";
+  font-size: 18px;
+  padding: 11px 0 15px;
+  font-weight: bold;
+  color: #454545;
+}
+
+.daily {
+  display: flex;
+  flex-flow: column;
+}
+
+.daily > li {
+  display: flex;
+  align-items: center;
   width: 100%;
-  aspect-ratio: 100/15;
-  background-color: black;
+  height: 30px;
+  padding: 5px;
+}
+
+.daily > li > a {
+  justify-content: flex-start;
+  align-items: center;
+  color: #000;
+}
+
+.daily > li > a > p {
+  color: #606060;
+  font-weight: bold;
+  margin-right: 12px;
+}
+
+em {
+  margin-left: 10px;
+  color: #f00;
+}
+
+footer {
+  padding: 56px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  aspect-ratio: 100/10;
+  background-color: #1c1c1c;
+}
+
+.foot-conatiner {
+  width: 1020px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.company-info {
+  display: flex;
+  flex-flow: column;
+  color: #9f9f9f;
+  gap: 10px;
+}
+
+.company-info > p {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.info {
+  font-size: 14.4px;
+  line-height: 1.5;
+}
+
+.release-note {
+  width: 70px;
+  height: 19px;
+  border: 1px solid #9f9f9f;
+  font-size: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 3px 5px;
+}
+
+.links {
+  display: flex;
+  justify-content: end;
+
+  width: 50%;
+  /* background-color: #aaa; */
+}
+
+.links > div {
+  margin-left: 80px;
+  color: #fff;
+}
+
+.links > div > p {
+  display: flex;
+  white-space: nowrap;
+  font-size: 14px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.foot-conatiner ul {
+  display: flex;
+  flex-flow: column;
+  justify-content: left;
+  align-items: flex-start;
+}
+
+.foot-conatiner ul > li {
+  display: flex;
+  white-space: nowrap;
+  font-size: 13px;
+  color: #adadad;
+  padding-top: 12px;
 }
