@@ -1,230 +1,404 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
+    />
+    <link rel="stylesheet" href="./css/LEcolne.css" />
+    <title>HIPHOPLE CLONE</title>
+    <!-- 모바일 가로 크기 1024 -->
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
-  <link rel="stylesheet" href="./css/LEcolne.css" />
-  <title>HIPHOPLE CLONE</title>
-  <!-- 모바일 가로 크기 1024 -->
-</head>
-
-<body>
-  <header>
-    <div class="header-container">
-      <div class="header-left">
-        <a class="header-logo header-elements" href="#">
-          <img src="./images/LEMAINLOGO.png" alt="" style="width: 145px; height: 21px" />
-        </a>
-      </div>
-
-      <div class="header-right header-elements">
-        <a href="" class="app-header-item">SNS</a>
-        <a href="" class="app-header-item">회사소개</a>
-        <a href="" class="app-header-item">광고안내</a>
-        <a href="" class="app-header-item">1</a>
-        <a href="" class="app-header-item">2</a>
-        <a href="" class="app-header-item">3</a>
-      </div>
-
-      <div class="header-menus header-elements">
-        <ul>
-          <li class="app-header-item">
-            <span><a href="#">국내 힙합</a></span>
-          </li>
-          <li class="app-header-item">
-            <span><a href="#">국외 힙합</a></span>
-          </li>
-          <li class="app-header-item">
-            <span><a href="#">음악 종합</a></span>
-          </li>
-          <li class="app-header-item">
-            <span><a href="#">거래·장터</a></span>
-          </li>
-          <li class="app-header-item">
-            <span><a href="#">가사해석 </a></span>
-          </li>
-          <li class="app-header-item">
-            <span><a href="#">워크룸</a></span>
-          </li>
-          <li class="app-header-item">
-            <span><a href="#">커뮤니티샵</a></span>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </header>
-
-  <div id="scroll-area">
-    <div class="body-content">
-      <div class="sw-display">
-        <img id="left-arrow" src="./images/left_angle.svg" alt="">
-        <div class="main-swipe">
-          <img src="./images/위켄드.jpg" alt="">
+  <body>
+    <header>
+      <div class="search-popup" id="search_popup" onclick="location.href='#';">
+        <div class="search-box" onclick="event.stopPropagation();">
+          <div class="search-box-head">
+            <button class="back">&lt;</button>
+            <h3>검색</h3>
+          </div>
+          <div class="search-box-body">
+            <input type="text" name="" id="" placeholder="검색" />
+            <button class="search">검색</button>
+          </div>
         </div>
-        <img id="right-arrow" src="./images/right_angle.svg" alt="">
       </div>
 
-      <div class="inner-container">
-        <div class="banner"><img src="./images/indi_240402.jpg" alt=""></div>
-
-        <div class="mline">
-          <span>CURATED</span>
-        </div>
-        <ul id="curated-content">
-          <li>
-            <a href="#">
-              <img src="./images/test/BEIGE.webp" alt="" />
-            </a>
-            <div class="pickbox">
-              <a href="#" class="title">
-                저 drill rapper들은 UK발음을 억지로 뱉네
-              </a>
+      <div class="login-popup" id="login_popup" onclick="location.href='#';">
+        <div class="login-box" onclick="event.stopPropagation();">
+          <div class="login-box-head">
+            <button class="back">&lt;</button>
+            <h3>로그인</h3>
+          </div>
+          <div class="login-box-body">
+            <input type="text" name="" id="" placeholder="아이디" />
+            <input type="text" name="" id="" placeholder="비밀번호" />
+            <div class="login-check">
+              <p>
+                <input type="checkbox" />
+                <label for="">로그인 상태 유지</label>
+              </p>
+              <p>ID/PW 찾기</p>
             </div>
-          </li>
-          <li>
-            <a href="#">
-              <img src="./images/test/KEUNG.webp" alt="" />
-            </a>
-            <div class="pickbox">
-              <a href="#" class="title"> 악마가 실로폰을 치네 딩동댕 </a>
-            </div>
-          </li>
-        </ul>
+            <button class="login">로그인</button>
+            <p>아직 회원이 아니신가요? <a href="">회원가입 하기</a></p>
+          </div>
+        </div>
+      </div>
 
-        <div class="mline">
-          <span>COMMUNITY</span>
+      <div class="header-container">
+        <div class="header-left">
+          <a class="header-logo header-elements" href="#">
+            <img
+              src="./images/LEMAINLOGO.png"
+              alt=""
+              style="width: 145px; height: 21px"
+            />
+          </a>
         </div>
 
-        <div class="community">
-          <div id="desktop-board">
-            <ul class="boards">
-              <li><a href="#">국내 힙합</a></li>
-              <li><a href="#">국외 힙합</a></li>
-              <li><a href="#">음악 종합</a></li>
-              <li><a href="#">거래 장터</a></li>
-              <li><a href="#">전곡 해석</a></li>
-              <li><a href="#">트랙 해석</a></li>
-              <li><a href="#">워크룸</a></li>
+        <div class="header-right header-elements">
+          <a href="" class="app-header-item">SNS</a>
+          <div class="social-popup">
+            <ul>
+              <li>
+                <a href="#"
+                  ><img src="./images/sns_instagram_white_min.png" alt=""
+                /></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img src="./images/sns_facebook_white_min.png" alt=""
+                /></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img src="./images/sns_youtube_white_min.png" alt=""
+                /></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img src="./images/sns_tiktok_white_min.png" alt=""
+                /></a>
+              </li>
             </ul>
+          </div>
+          <a href="" class="app-header-item">회사소개</a>
+          <a href="" class="app-header-item">광고안내</a>
+          <a href="#search_popup" class="app-header-item search-icon"
+            ><img src="./images/search-outline.png" alt=""
+          /></a>
+          <a
+            href=""
+            class="app-header-item"
+            id="dark-mode"
+            onclick="return flase"
+            ><img src="./images/contrast-outline.png" alt=""
+          /></a>
+          <a href="#login_popup" class="app-header-item"
+            ><img src="./images/person-outline.png" alt=""
+          /></a>
+        </div>
 
-            <div class="board-view">
-              <ul class="board-view-each">
-                <li class="board-kr">
-                  <ul class="kr-list">
-                    <li>
-                      <span class="category">분류</span><span class="title">글 제목이 올 공간입니다.</span>
-                    </li>
-                    <li>
-                      <span class="category">분류</span><span class="title">글 제목이 올 공간입니다.</span>
-                    </li>
-                    <li>
-                      <span class="category">분류</span><span class="title">글 제목이 올 공간입니다.</span>
-                    </li>
-                    <li>
-                      <span class="category">분류</span><span class="title">글 제목이 올 공간입니다.</span>
-                    </li>
-                    <li>
-                      <span class="category">분류</span><span class="title">글 제목이 올 공간입니다.</span>
-                    </li>
-                    <li>
-                      <span class="category">분류</span><span class="title">글 제목이 올 공간입니다.</span>
-                    </li>
-                    <li>
-                      <span class="category">분류</span><span class="title">글 제목이 올 공간입니다.</span>
-                    </li>
-                    <li>
-                      <span class="category">분류</span><span class="title">글 제목이 올 공간입니다.</span>
-                    </li>
-                  </ul>
-                  <div class="more_area">
-                    국내 힙합
-                    <p>더보기 ></p>
-                  </div>
+        <div class="header-menus header-elements">
+          <ul>
+            <li class="app-header-item">
+              <span><a href="#">국내 힙합</a></span>
+            </li>
+            <li class="app-header-item">
+              <span><a href="#">국외 힙합</a></span>
+            </li>
+            <li class="app-header-item">
+              <span><a href="#">음악 종합</a></span>
+            </li>
+            <li class="app-header-item">
+              <span><a href="#">거래·장터</a></span>
+            </li>
+            <li class="app-header-item">
+              <span
+                ><a href="#"
+                  >가사해석
+                  <img src="./images/chevron-down-outline.png" alt="" /></a
+              ></span>
+              <div class="lyric">
+                <a href="">전곡 해석</a>
+                <a href="">트랙 해석</a>
+              </div>
+            </li>
+            <li class="app-header-item">
+              <span><a href="#">워크룸</a></span>
+            </li>
+            <li class="app-header-item">
+              <span><a href="#">커뮤니티샵</a></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <div id="scroll-area">
+      <div class="body-content">
+        <div class="sw-display">
+          <img id="left-arrow" src="./images/left_angle.svg" alt="" />
+
+          <div class="main-swipe">
+            <div class="sw-text">
+              <span id="category">국외 힙합</span>
+              <span id="title">닉값을 위한 위켄드의 모든 앨범 소개</span>
+              <span id="dots"
+                ><p>●</p>
+                <p>●</p>
+                <p>●</p>
+                <p>●</p>
+                <p>●</p></span
+              >
+            </div>
+            <img src="./images/위켄드.jpg" alt="" />
+          </div>
+
+          <img id="right-arrow" src="./images/right_angle.svg" alt="" />
+        </div>
+
+        <div class="inner-container">
+          <div class="banner">
+            <img src="./images/indi_240402.jpg" alt="" />
+          </div>
+
+          <div class="mline">
+            <span>CURATED</span>
+          </div>
+          <ul id="curated-content">
+            <li>
+              <a href="#" class="curate">
+                <img src="./images/test/BEIGE.webp" alt="" />
+              </a>
+              <div class="pickbox">
+                <a href="#" class="title">
+                  저 drill rapper들은 UK발음을 억지로 뱉네
+                </a>
+              </div>
+            </li>
+            <li>
+              <a href="#" class="curate">
+                <img src="./images/test/KEUNG.webp" alt="" />
+              </a>
+              <div class="pickbox">
+                <a href="#" class="title"> 악마가 실로폰을 치네 딩동댕 </a>
+              </div>
+            </li>
+          </ul>
+
+          <div class="mline">
+            <span>COMMUNITY</span>
+          </div>
+
+          <div class="community">
+            <div id="desktop-board">
+              <ul class="boards">
+                <li><a href="#" onclick="return false">국내 힙합</a></li>
+                <li><a href="#" onclick="return false">국외 힙합</a></li>
+                <li><a href="#" onclick="return false">음악 종합</a></li>
+                <li><a href="#" onclick="return false">거래 장터</a></li>
+                <li><a href="#" onclick="return false">전곡 해석</a></li>
+                <li><a href="#" onclick="return false">트랙 해석</a></li>
+                <li><a href="#" onclick="return false">워크룸</a></li>
+              </ul>
+
+              <div class="board-view">
+                <ul class="board-view-each">
+                  <li class="board-kr">
+                    <ul class="kr-list">
+                      <li>
+                        <a href="#" onclick="return false">
+                          <span class="category">인증/후기</span
+                          ><span class="title">희귀 앨범 구했습니다.</span
+                          ><em>[7]</em>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" onclick="return false">
+                          <span class="category">음악</span
+                          ><span class="title"
+                            >Glow forever랑 비슷한 앨범 추천해주세요</span
+                          >
+                          <em>[2]</em>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" onclick="return false">
+                          <span class="category">음악</span
+                          ><span class="title"
+                            >국힙 아티스트들 홍보, 마케팅 관련 이야기들이 항상
+                            나오는데</span
+                          >
+                          <em>[1]</em>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" onclick="return false">
+                          <span class="category">음악</span
+                          ><span class="title">레디 500000</span>
+                          <em>[8]</em>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" onclick="return false">
+                          <span class="category">음악</span
+                          ><span class="title">이거 처음듣는데 개쩌네요</span>
+                          <em>[1]</em>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" onclick="return false">
+                          <span class="category">일반</span
+                          ><span class="title"
+                            >한국의 켄드릭라마가 누굴까요</span
+                          >
+                          <em>[10]</em>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" onclick="return false">
+                          <span class="category">음악</span
+                          ><span class="title">빈첸 1집</span>
+                          <em>[1]</em>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" onclick="return false">
+                          <span class="category">음악</span
+                          ><span class="title">좋아하는 올드? 식케이곡</span>
+                          <em>[2]</em>
+                        </a>
+                      </li>
+                    </ul>
+                    <div class="more_area">
+                      국내 힙합
+                      <p>더보기 ></p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div id="desktop-daily">
+              <p>오늘의 인기글</p>
+              <ul class="daily">
+                <li>
+                  <a href="#" class="curate" onclick="return false">
+                    <p>1</p>
+                    프로듀서 OK는 정체가 뭔가요<em>[6]</em>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="curate" onclick="return false">
+                    <p>2</p>
+                    The New Sound 이제 들어봤는데<em>[5]</em>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="curate" onclick="return false">
+                    <p>3</p>
+                    [앨범 리뷰] 에스파 미니 5집&lt;Whiplash&gt;<em>[3]</em>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="curate" onclick="return false">
+                    <p>4</p>
+                    최근에 산 CD 자랑<em></em>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="curate" onclick="return false">
+                    <p>5</p>
+                    [힙찔] 나의 인생 앨범을 가득 만들어준 - LIL UGLY MANE<em
+                      >[9]</em
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="curate" onclick="return false">
+                    <p>6</p>
+                    한국의 라키가 밀리라고들 하는데<em>[1]</em>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="curate" onclick="return false">
+                    <p>7</p>
+                    돈다 탑3<em>[25]</em>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="curate" onclick="return false">
+                    <p>8</p>
+                    [힙찔] 트래비스 스캇 소개하기<em>[10]</em>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="curate" onclick="return false">
+                    <p>9</p>
+                    아쉬우니까 (끝)<em>[27]</em>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="curate" onclick="return false">
+                    <p>10</p>
+                    이거 희소성 있나요<em>[16]</em>
+                  </a>
                 </li>
               </ul>
             </div>
           </div>
-          <div id="desktop-daily">
-            <p>오늘의 인기글</p>
-            <ul class="daily">
-              <li><a href="#">
-                  <p>1</p>인기글 제목입니다.<em>[댓글 수]</em>
-                </a></li>
-              <li><a href="#">
-                  <p>2</p>인기글 제목입니다.<em>[댓글 수]</em>
-                </a></li>
-              <li><a href="#">
-                  <p>3</p>인기글 제목입니다.<em>[댓글 수]</em>
-                </a></li>
-              <li><a href="#">
-                  <p>4</p>인기글 제목입니다.<em>[댓글 수]</em>
-                </a></li>
-              <li><a href="#">
-                  <p>5</p>인기글 제목입니다.<em>[댓글 수]</em>
-                </a></li>
-              <li><a href="#">
-                  <p>6</p>인기글 제목입니다.<em>[댓글 수]</em>
-                </a></li>
-              <li><a href="#">
-                  <p>7</p>인기글 제목입니다.<em>[댓글 수]</em>
-                </a></li>
-              <li><a href="#">
-                  <p>8</p>인기글 제목입니다.<em>[댓글 수]</em>
-                </a></li>
-              <li><a href="#">
-                  <p>9</p>인기글 제목입니다.<em>[댓글 수]</em>
-                </a></li>
-              <li><a href="#">
-                  <p>10</p>인기글 제목입니다<em>[댓글 수]</em>
-                </a></li>
-            </ul>
+
+          <div class="banner">
+            <a href="https://www.youtube.com/channel/UCRRdwcQaU4x98otHO_XsncQ"
+              ><img src="./images/newsletter_banner_z_240318.jpg" alt=""
+            /></a>
           </div>
         </div>
-
-        <div class="banner"><a href="https://www.youtube.com/channel/UCRRdwcQaU4x98otHO_XsncQ"><img
-              src="./images/newsletter_banner_z_240318.jpg" alt=""></a></div>
       </div>
+
+      <footer>
+        <div class="foot-conatiner">
+          <div class="company-info">
+            <p>LE MEDIA</p>
+            <div class="info">
+              엘이미디어 | 서울시 마포구 와우산로10길 37, 2층 | 070-4103-6000
+              <br />
+              등록번호: 서울아04698 | 등록·발행일: 2017.09.07 <br />
+              발행·편집인: 최성웅 | 청소년보호책임자: 최성웅
+            </div>
+            <a class="release-note">릴리즈 노트</a>
+          </div>
+          <div class="links">
+            <div class="archive">
+              <p>아카이브</p>
+              <ul class="archive-list">
+                <li>피쳐</li>
+                <li>국외 뉴스</li>
+                <li>국내 뉴스</li>
+                <li>자막 영상</li>
+                <li>스타일</li>
+                <li>스페셜 페이지</li>
+              </ul>
+            </div>
+            <div class="media">
+              <p>엘이미디어</p>
+              <ul class="media-list">
+                <li>회사소개</li>
+                <li>광고안내</li>
+                <li>뉴스제보</li>
+                <li>이용약관</li>
+                <li>공지사항</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
 
-    <footer>
-      <div class="foot-conatiner">
-        <div class="company-info">
-          <p>LE MEDIA</p>
-          <div class="info">엘이미디어 | 서울시 마포구 와우산로10길 37, 2층 | 070-4103-6000 <br>
-            등록번호: 서울아04698 | 등록·발행일: 2017.09.07 <br>
-            발행·편집인: 최성웅 | 청소년보호책임자: 최성웅</div>
-          <a class="release-note">릴리즈 노트</a>
-        </div>
-        <div class="links">
-          <div class="archive">
-            <p>아카이브</p>
-            <ul class="archive-list">
-              <li>피쳐</li>
-              <li>국외 뉴스</li>
-              <li>국내 뉴스</li>
-              <li>자막 영상</li>
-              <li>스타일</li>
-              <li>스페셜 페이지</li>
-            </ul>
-          </div>
-          <div class="media">
-            <p>엘이미디어</p>
-            <ul class="media-list">
-              <li>회사소개</li>
-              <li>광고안내</li>
-              <li>뉴스제보</li>
-              <li>이용약관</li>
-              <li>공지사항</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </footer>
-  </div>
-
-  <!-- <div>이게뭐야</div> -->
-</body>
-
+    <!-- <div>이게뭐야</div> -->
+  </body>
 </html>
